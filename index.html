@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loading • SadboiTurtles × TheConsoleXplosion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="card">
+    <header class="brand">
+      <img class="logo" src="assets/logo.svg" alt="SBT × TCX">
+      <div class="titles">
+        <h1>Prop Hunt Server</h1>
+        <p class="subtitle">SadboiTurtles × TheConsoleXplosion</p>
+      </div>
+    </header>
+
+    <section class="progress">
+      <div class="spinner"></div>
+      <p class="status" id="status">Connecting… downloading workshop items…</p>
+    </section>
+
+    <section class="info">
+      <div class="col">
+        <h2>Rules</h2>
+        <ul>
+          <li>Be respectful • No harassment or slurs.</li>
+          <li>No cheating, exploits, ghosting, or stream sniping.</li>
+          <li>Have fun • Play fair • Don’t ruin rounds.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Links</h2>
+        <ul class="links">
+          <li><a href="https://twitch.tv/sadboiturtles" target="_blank" rel="noreferrer">Twitch: SadboiTurtles</a></li>
+          <li><a href="https://twitch.tv/theconsolexplosion" target="_blank" rel="noreferrer">Twitch: TheConsoleXplosion</a></li>
+          <li><a href="https://youtube.com/@SADBOITURTLES" target="_blank" rel="noreferrer">YouTube: SadboiTurtles</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Tips</h2>
+        <ul id="tips">
+          <li>Use <b>F3</b> for a random taunt (Prop Hunt Enhanced).</li>
+          <li>Rotate your prop to blend in; smaller isn’t always better.</li>
+          <li>Type <b>!rtv</b> to Rock The Vote if the map isn’t vibing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="marquee">
+        <span>Now loading • Please don’t disconnect • Join the community and say hi! • </span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const messages = [
+      "Connecting…",
+      "Downloading workshop items…",
+      "Caching props and materials…",
+      "Almost there…"
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById('status').textContent = messages[i % messages.length];
+      i++;
+    }, 2500);
+  </script>
+</body>
+</html>
